@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocation - Sample</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+
+
+
+<div class="contentarea">
+
+    <h1>Geolocation</h1>
+
+        <div id="instructions">
+            Click the button to show your device location.
+        </div>
+        <div id="instructions-note">
+            Remember to enable the location services on your browser.
+        </div>
+
+        <div class="smartphone" id="smartphone">
+
+            <div id="content">
+                <button id = "find-me">Show my location</button><br/>
+
+
+                <p id = "status"></p>
+
+                <table id="coords">
+                    <tr>
+                        <td>Latitude</td>
+                        <td id="lat"></td>
+                    </tr>
+                    <tr>
+                        <td>Longitude</td>
+                        <td id="long"></td>
+                    </tr>
+                </table>
+
+                <br>
+
+            </div>
+
+
+                <div style="text-align: center;">
+                <a id="map-link" target="_blank"></a>
+                </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

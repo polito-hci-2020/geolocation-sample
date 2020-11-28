@@ -1,2 +1,2 @@
 # geolocalitation-sample
-A sample project to explore the geolocalitation feature.
+A sample project to explore the geolocation feature.
