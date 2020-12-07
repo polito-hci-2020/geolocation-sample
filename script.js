@@ -1,10 +1,10 @@
-function geoFindMe() {
+function handleGeolocation() {
 
-    const status = document.querySelector('#status');
-    const mapLink = document.querySelector('#map-link');
-    const coords = document.querySelector('#coords');
-    const lat = document.querySelector('#lat');
-    const long = document.querySelector('#long');
+    let status = document.querySelector('#status');
+    let mapLink = document.querySelector('#map-link');
+    let coords = document.querySelector('#coords');
+    let lat = document.querySelector('#lat');
+    let long = document.querySelector('#long');
 
     mapLink.href = '';
     mapLink.innerHTML = '';
@@ -17,11 +17,10 @@ function geoFindMe() {
     }
 
     function success(position) {
-        const latitude  = position.coords.latitude;
-        const longitude = position.coords.longitude;
+        let latitude  = position.coords.latitude;
+        let longitude = position.coords.longitude;
 
-        status.innerHTML = `Location retrieved`;
-        status.style.setProperty('color', '#28A745');
+        status.innerHTML = '';
 
         coords.style.setProperty('display', 'block');
         lat.innerHTML = `${latitude}°`;
@@ -32,10 +31,11 @@ function geoFindMe() {
     }
 
     function error() {
-        status.innerHTML = 'Unable to retrieve your location';
-        status.style.setProperty('color', '#DC3545');
+        status.innerHTML = '';
+        window.alert("Error: the browser cannot access the location. Change the" +
+            " browser permission settings and reload the page.");
     }
 
 }
 
-document.querySelector('#find-me').addEventListener('click', geoFindMe);
+document.querySelector('#find-me').addEventListener('click', handleGeolocation);
